@@ -1,58 +1,109 @@
+.navbar {
+  width: 100%;
+  background: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.nav-menu ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.nav-menu{
-  width: 50%;
-  margin: auto;
-}
+  .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    font-family: sans-serif;
+  }
 
-.open{
-  display: none;
-}
-
-
-@media screen and (max-width: 601px) {
-  .nav-menu ul{
-    position: fixed;
-    right: -100%;
-    top: 0;
-    height: 110vh;
-    z-index: 9999;
-    background: rgb(255, 255, 255);
+  .nav-menu {
     width: 50%;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 0;
-  }
-  .logo{
-    margin-right: auto;
-  }
-  .open{
-    background: #3b3838;
-    padding: 12px 30px;
-    color: white;
-    border-radius: 4px;
-    border: none;
-    display: block;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
 
-  }
-  .nav-menu{
-    background: red;
-    width: max-content;
-    cursor: pointer;
-    &:hover{
-      ul{
-        right: 0;
+      li a {
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+      }
+    }
 
+    &.active ul {
+      right: 0;
+    }
+  }
+
+  .open {
+    display: none;
+  }
+
+  .auth-section {
+    display: flex;
+    gap: 10px;
+
+    button {
+      text-decoration: none;
+      font-family: sans-serif;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      background: #3b3838;
+      color: white;
+      padding: 8px 16px;
+    }
+
+    .cart-btn {
+      background: #ff7112;
+    }
+  }
+
+  @media screen and (max-width: 601px) {
+    .nav-menu {
+      position: fixed;
+      right: -100%;
+      top: 0;
+      height: 100vh;
+      background: #fff;
+      z-index: 9999;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      transition: all 0.3s ease;
+
+      ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        li {
+          padding: 10px 0;
+
+          a {
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
       }
-      .open{
-        display: none;
-      }
+    }
+
+    .open {
+      display: block;
+      background: #3b3838;
+      padding: 12px 30px;
+      color: white;
+      border-radius: 4px;
+      border: none;
     }
   }
 }

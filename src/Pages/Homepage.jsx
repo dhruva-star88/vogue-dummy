@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {Box, Card,CardBody,Stack,Divider,CardFooter,ButtonGroup, Image,Button, Grid,GridItem,Heading,Text} from "@chakra-ui/react"
-import img from "../Images/dom-hill-nimElTcTNyY-unsplash__1_-imageonline.co-merged-removebg-preview (1).png"
+import img from "../Images/orange.png"
 import img2 from "../Images/young-teen-woman-sunglasses-hat-holding-shopping-bags-her-hands-feeling-so-happiness-isolated-green-wall.jpg"
 import banner from '../Images/vecteezy_online-shopping-on-phone-buy-sell-business-digital-web_4299835.jpg'
 import { useSelector } from "react-redux";
@@ -12,7 +12,7 @@ export const Homepage = () => {
   console.log(isAuth);
   console.log(username);
  
-   let bg="#ff7112"
+   let bg="#CDC0A7"
   return (
     <>
     {/* <h1>home</h1>? */}
@@ -21,9 +21,9 @@ export const Homepage = () => {
   <GridItem w='100%' h='80vh' 
   display="flex"  justifyContent="center" alignItems="center">
        <Box paddingLeft="30px" justifyContent="space-evenly"  alignItems="center">
-       <Text  color="white" fontSize="20px"   fontStyle="600" textAlign="start" >TRANDY FASHION ZONE</Text>
-    <Heading color="white"  fontFamily="sans-serif" w="90%" lineHeight="70px"  textAlign="start" 
-    fontSize="62px"  marginTop="20px" className="home-head-ing">WE * ALWAYS BUILD STUNNING FASHION EXPERIENCES</Heading>
+       <Text  color="white" fontSize="20px"   fontStyle="600" textAlign="start" ></Text>
+    <Heading color="white"  fontFamily="sans-serif" w="100%" lineHeight="80px"  textAlign="start" 
+    fontSize="62px"  marginTop="20px" className="home-head-ing">Personalized Fashion, Driven by AI!!</Heading>
   <Box  textAlign="start" marginTop="20px"> 
 
       <Button border ="none" borderRadius="50Px" bg="black" 
@@ -35,7 +35,15 @@ export const Homepage = () => {
   </GridItem>
   <GridItem w='100%' h='80vh' >
 
-    <Image w="80%" src={img}  display="flex"  margin=" auto"  justifyContent="center" alignItems="center" className="head-img"></Image>
+  <Image
+  w="180%"
+  paddingTop="27px"
+  paddingRight="500px"
+  marginLeft="-150px" /* Set to 0 to remove extra space */
+  src={img}
+  display="block" /* Use block or inline-block for alignment */
+  className="head-img"
+/>
   </GridItem>
 </Grid>
 <Grid maxW="95%"  margin=" 10px auto" height="100%"
